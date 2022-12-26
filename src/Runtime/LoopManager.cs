@@ -24,7 +24,7 @@ namespace Sharphound.Runtime
             _filenames = new List<string>();
         }
 
-        public async Task StartLooping()
+        public async System.Threading.Tasks.Task StartLooping()
         {
             if (!_context.Flags.Loop)
                 return;

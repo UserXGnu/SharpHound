@@ -17,7 +17,7 @@ namespace Sharphound.Writers
             Queue = new List<T>();
         }
 
-        internal async Task AcceptObject(T item)
+        internal async System.Threading.Tasks.Task AcceptObject(T item)
         {
             if (NoOp)
                 return;
@@ -36,9 +36,9 @@ namespace Sharphound.Writers
             }
         }
 
-        protected abstract Task WriteData();
+        protected abstract System.Threading.Tasks.Task WriteData();
 
-        internal abstract Task FlushWriter();
+        internal abstract System.Threading.Tasks.Task FlushWriter();
 
         protected abstract void CreateFile();
     }

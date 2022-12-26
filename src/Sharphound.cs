@@ -332,7 +332,7 @@ namespace Sharphound
 
     public class Program
     {
-        public static async Task Main(string[] args)
+        public static async System.Threading.Tasks.Task Main(string[] args)
         {
             var logger = new BasicLogger((int)LogLevel.Information);
             logger.LogInformation("This version of SharpHound is compatible with the 4.2 Release of BloodHound");

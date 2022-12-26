@@ -57,7 +57,7 @@ namespace Sharphound.Writers
         /// <summary>
         ///     Flushes data to the file by serializing to JSON and then writing with appropriate seperators
         /// </summary>
-        protected override async Task WriteData()
+        protected override async System.Threading.Tasks.Task WriteData()
         {
             foreach (var item in Queue)
             {
@@ -68,7 +68,7 @@ namespace Sharphound.Writers
         /// <summary>
         ///     Flushes remaining data to the file and then manually writes JSON tags to close the file out
         /// </summary>
-        internal override async Task FlushWriter()
+        internal override async System.Threading.Tasks.Task FlushWriter()
         {
             if (!FileCreated)
                 return;

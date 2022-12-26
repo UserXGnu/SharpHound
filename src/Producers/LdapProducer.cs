@@ -19,7 +19,7 @@ namespace Sharphound.Producers
         ///     Uses the LDAP filter and properties specified to grab data from LDAP, and push it to the queue.
         /// </summary>
         /// <returns></returns>
-        public override async Task Produce()
+        public override async System.Threading.Tasks.Task Produce()
         {
             var cancellationToken = Context.CancellationTokenSource.Token;
 

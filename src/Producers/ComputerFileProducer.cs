@@ -24,7 +24,7 @@ namespace Sharphound.Producers
         ///     Pushes the corresponding LDAP objects to the queue.
         /// </summary>
         /// <returns></returns>
-        public override async Task Produce()
+        public override async System.Threading.Tasks.Task Produce()
         {
             var computerFile = Context.ComputerFile;
             var cancellationToken = Context.CancellationTokenSource.Token;

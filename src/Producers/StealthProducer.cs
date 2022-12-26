@@ -31,7 +31,7 @@ namespace Sharphound.Producers
         ///     Produces stealth LDAP targets
         /// </summary>
         /// <returns></returns>
-        public override async Task Produce()
+        public override async System.Threading.Tasks.Task Produce()
         {
             var cancellationToken = Context.CancellationTokenSource.Token;
             //If we haven't generated our stealth targets, we'll build it now

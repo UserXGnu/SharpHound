@@ -43,7 +43,7 @@ namespace Sharphound.Client
         int StatusInterval { get; set; }
         int Threads { get; set; }
         string RealDNSName { get; set; }
-        Task CollectionTask { get; set; }
+        System.Threading.Tasks.Task CollectionTask { get; set; }
         CancellationTokenSource CancellationTokenSource { get; set; }
 
         ILogger Logger { get; set; }
@@ -64,7 +64,7 @@ namespace Sharphound.Client
         ///     Does throttle and jitter for computer requests
         /// </summary>
         /// <returns></returns>
-        Task DoDelay();
+        System.Threading.Tasks.Task DoDelay();
 
         string GetCachePath();
         ResolvedCollectionMethod SetupMethodsForLoop();

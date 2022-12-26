@@ -12,7 +12,7 @@ namespace Sharphound.Runtime
 {
     public static class LDAPConsumer
     {
-        internal static async Task ConsumeSearchResults(Channel<ISearchResultEntry> inputChannel,
+        internal static async System.Threading.Tasks.Task ConsumeSearchResults(Channel<ISearchResultEntry> inputChannel,
             Channel<CSVComputerStatus> computerStatusChannel, Channel<OutputBase> outputChannel, IContext context,
             int id)
         {

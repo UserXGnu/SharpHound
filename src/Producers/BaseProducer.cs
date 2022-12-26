@@ -22,7 +22,7 @@ namespace Sharphound.Producers
             Channel = channel;
         }
 
-        public abstract Task Produce();
+        public abstract System.Threading.Tasks.Task Produce();
 
         protected LDAPData CreateLDAPData()
         {

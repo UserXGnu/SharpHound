@@ -24,12 +24,12 @@ namespace Sharphound.Writers
             if (!_context.Flags.DumpComputerStatus) NoOp = true;
         }
 
-        protected override async Task WriteData()
+        protected override async System.Threading.Tasks.Task WriteData()
         {
             foreach (var item in Queue) await _streamWriter.WriteLineAsync(item.ToCsv());
         }
 
-        internal async Task StartWriter()
+        internal async System.Threading.Tasks.Task StartWriter()
         {
             if (_context.Flags.DumpComputerStatus)
             {
@@ -43,7 +43,7 @@ namespace Sharphound.Writers
             }
         }
 
-        internal override async Task FlushWriter()
+        internal override async System.Threading.Tasks.Task FlushWriter()
         {
             await WriteData();
             await _streamWriter.FlushAsync();

@@ -56,7 +56,7 @@ namespace Sharphound
         public int PortScanTimeout { get; set; } = 500;
         public CancellationTokenSource CancellationTokenSource { get; set; }
         public ILDAPUtils LDAPUtils { get; set; }
-        public Task CollectionTask { get; set; }
+        public System.Threading.Tasks.Task CollectionTask { get; set; }
         public Flags Flags { get; set; }
 
         public void UpdateLoopTime()
@@ -64,7 +64,7 @@ namespace Sharphound
             CurrentLoopTime = $"{DateTime.Now:yyyyMMddHHmmss}";
         }
 
-        public async Task DoDelay()
+        public async System.Threading.Tasks.Task DoDelay()
         {
             if (Throttle == 0)
                 return;
